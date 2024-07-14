@@ -13,13 +13,13 @@
         android:theme="@style/Theme.Fuelcalculator"
         tools:targetApi="31">
         <activity
+            android:name=".Result"
+            android:exported="false" />
+        <activity
             android:name=".Consume"
             android:exported="false" />
         <activity
             android:name=".Distance"
-            android:exported="false" />
-        <activity
-            android:name=".Dristance"
             android:exported="false" />
         <activity
             android:name=".GasPrice"

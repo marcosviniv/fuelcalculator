@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
     tools:context=".Consume">
 
     <TextView
@@ -15,7 +14,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:textStyle="bold"
-        android:textColor="@color/white"
         android:text="Consumo do Carro"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,9 +40,11 @@
         android:id="@+id/btn_step2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/gray"
         android:text="Next"
+        android:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_consume"
         app:layout_constraintVertical_bias="0.919"
         tools:layout_editor_absoluteX="161dp" />
@@ -61,9 +61,11 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_Step2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_consume_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:hint="Ex: 9km/l" />
+            android:hint="Ex: 9km/l"
+            android:inputType="text"
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
