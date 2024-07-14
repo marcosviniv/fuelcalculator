@@ -32,13 +32,12 @@ class Distance : AppCompatActivity() {
                 val price = intent.getFloatExtra("KEY_PRICE", 0f)
                 val consume = intent.getFloatExtra("KEY_CONSUME", 0f)
                 val distance: Float = edtDistance.text.toString().toFloat()
+
                 val intent = Intent(this, Result::class.java)
                 intent.putExtra(KEY_PRICE3, price)
                 intent.putExtra(KEY_CONSUME2, consume)
                 intent.putExtra(KEY_DISTANCE, distance)
                 startActivity(intent)
-
-
 
             } catch (e: NumberFormatException) {
                 edtDistance.error = "Por favor, insira um valor válido."
