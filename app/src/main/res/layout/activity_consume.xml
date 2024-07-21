@@ -5,7 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context=".Consume">
+
+    <LinearLayout
+        android:id="@+id/fcscreen1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/carconsume" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/car_consume"
@@ -14,7 +29,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:textStyle="bold"
-        android:text="Consumo do Carro"
+        android:textColor="@color/white"
+        android:text="Car consume"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +72,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
+        android:textColorHint="@color/gray"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Step2">
@@ -64,6 +82,8 @@
             android:id="@+id/input_consume_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:hint="Ex: 9km/l"
             android:inputType="numberDecimal"
             android:maxLines="1" />
