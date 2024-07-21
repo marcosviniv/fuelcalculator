@@ -38,7 +38,8 @@ class Result : AppCompatActivity() {
         tvPrice.text = price.toString()
         val tvDistance = findViewById<TextView>(R.id.tv_distance)
         tvDistance.text = distance.toString()
-
+        val tvConsume = findViewById<TextView>(R.id.tv_consume)
+        tvConsume.text = consume.toString()
         val btnReturn = findViewById<Button>(R.id.btn_return)
 
         btnReturn.setOnClickListener {

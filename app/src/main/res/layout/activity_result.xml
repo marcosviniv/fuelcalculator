@@ -5,7 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context=".Result">
+
+    <LinearLayout
+        android:id="@+id/fcscreen1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_result"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="369dp"
+            android:layout_height="198dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/calc" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_result"
@@ -18,6 +34,7 @@
         android:textSize="64dp"
         android:textStyle="bold"
         tools:text="35.88"
+        android:textColor="@color/green"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,20 +44,23 @@
         android:id="@+id/resume_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
         android:gravity="center"
-        android:textSize="20dp"
-        android:text="Resumo dos dados inseridos"
-        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Summary of Entered Data"
+        app:layout_constraintTop_toBottomOf="@+id/fcscreen1" />
 
     <TextView
         android:id="@+id/price_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Price"
-        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24dp"
         android:layout_marginTop="64dp"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resume_label" />
 
@@ -48,8 +68,9 @@
         android:id="@+id/tv_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1.7"
-        android:textSize="16dp"
+        android:textColor="@color/white"
+        tools:text="1.7"
+        android:textSize="24dp"
         app:layout_constraintStart_toEndOf="@+id/price_label"
         app:layout_constraintTop_toTopOf="@+id/price_label"
         app:layout_constraintBottom_toBottomOf="@+id/price_label"
@@ -59,10 +80,12 @@
         android:id="@+id/consume_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consume"
-        android:textSize="16dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="24dp"
-        android:layout_marginStart="100dp"
+        android:textColor="@color/white"
+        android:text="Consume"
+        android:textSize="24dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price_label" />
 
@@ -70,8 +93,9 @@
         android:id="@+id/tv_consume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5.0"
-        android:textSize="16dp"
+        tools:text="22"
+        android:textColor="@color/white"
+        android:textSize="24dp"
         app:layout_constraintTop_toBottomOf="@id/tv_price"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@id/tv_price"
@@ -82,7 +106,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Distance"
-        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@id/consume_label"
         app:layout_constraintTop_toBottomOf="@+id/consume_label" />
@@ -91,8 +117,9 @@
         android:id="@+id/tv_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5.0"
-        android:textSize="16dp"
+        tools:text="1.7"
+        android:textColor="@color/white"
+        android:textSize="24dp"
         app:layout_constraintTop_toBottomOf="@id/tv_consume"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@id/tv_price"
